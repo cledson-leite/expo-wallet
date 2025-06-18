@@ -1,7 +1,7 @@
 import {neon} from "@neondatabase/serverless";
 import "dotenv/config";
 
-const sql = neon(process.env.DATABASE_URL);
+export const sql = neon(process.env.DATABASE_URL);
 const connectDb = async () => {
   try {
     await sql`CREATE TABLE IF NOT EXISTS transactions(
